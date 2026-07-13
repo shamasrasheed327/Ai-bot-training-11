@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyOUz0p0lTRuWt8xKaiqrtMD",
+      "authorship_tag": "ABX9TyPR3lnOHhcRjUPRH3cyYue+",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -12541,6 +12541,92 @@
             "Entry     : 1.15567\n",
             "SL        : 1.15321\n",
             "TP        : 1.16059\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import requests\n",
+        "\n",
+        "BOT_TOKEN = \"YAHAN_APNA_NAYA_BOT_TOKEN\"\n",
+        "CHAT_ID = \"YAHAN_APNI_CHAT_ID\"\n",
+        "\n",
+        "message = \"\"\"\n",
+        "🤖 Titan AI Trading Bot\n",
+        "\n",
+        "✅ Connection Successful\n",
+        "\n",
+        "Bot is now connected to Telegram.\n",
+        "\"\"\"\n",
+        "\n",
+        "url = f\"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage\"\n",
+        "\n",
+        "requests.post(url, data={\n",
+        "    \"chat_id\": CHAT_ID,\n",
+        "    \"text\": message\n",
+        "})"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lj3Nbjk_h6j6",
+        "outputId": "128d73fa-51f4-470c-b30e-c08719017c63"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<Response [404]>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import requests\n",
+        "\n",
+        "# ===== Apni Details Yahan Dalo =====\n",
+        "BOT_TOKEN = \"YAHAN_APNA_BOT_TOKEN\"\n",
+        "CHAT_ID = \"YAHAN_APNA_CHAT_ID\"\n",
+        "\n",
+        "# ===== Message =====\n",
+        "message = \"✅ AI Trading Bot successfully connected!\"\n",
+        "\n",
+        "# ===== Telegram API =====\n",
+        "url = \"https://api.telegram.org/bot8317300468:AAEB40GfcpnnPp0njkiwfivBJZnn0H9r4Gg/sendMessage\"\n",
+        "\n",
+        "data = {\n",
+        "    \"chat_id\": 8831207490,\n",
+        "    \"text\": message\n",
+        "}\n",
+        "\n",
+        "response = requests.post(url, data=data)\n",
+        "\n",
+        "print(response.text)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TDT2L6xmm2J_",
+        "outputId": "5b4929cf-608c-4a46-ddc2-f457c85e438a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{\"ok\":true,\"result\":{\"message_id\":2,\"from\":{\"id\":8317300468,\"is_bot\":true,\"first_name\":\"arham_ai_trading_bot\",\"username\":\"Shamas407bot\"},\"chat\":{\"id\":8831207490,\"first_name\":\"SR\",\"last_name\":\"Khan\",\"type\":\"private\"},\"date\":1783915877,\"text\":\"\\u2705 AI Trading Bot successfully connected!\"}}\n"
           ]
         }
       ]
